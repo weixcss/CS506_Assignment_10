@@ -1,26 +1,50 @@
+## Demonstration
+Watch the video below to see a full demonstration of the Image Search application in action:
+[![Image Search](https://img.youtube.com/vi/iY7UeGXafnE/0.jpg)](https://youtu.be/iY7UeGXafnE)
+
 # Assignment 10: Image Search
---------------------
 
-**Goal:** Implement a simplified version of Google Image Search.
+---
 
-This is a GUI assignment. Please set up a GitHub repo like previous assignments. There is no GUI template, but we encourage you to reuse code from earlier homeworks.
+In this assignment, we implemented a simplified version of Google Image Search using a Flask web application. The application allows users to perform three types of searches—`Image query`, `Text query`, and `Hybrid query`—on a dataset of images, using CLIP embeddings for similarity computation.
 
-**Deliverables:**
- - A GitHub repo containing all the code necessary to reproduce your results, including a `Makefile`.
- - A 1-2 minute video demonstrating the requirements.
+## Task Overview
+- **Core Functionalities**:
+  - **Image Query**: Upload an image, and the app returns the top 5 most relevant images from the dataset.
+  - **Text Query**: Enter a text query, and the app returns the top 5 most relevant images based on semantic similarity.
+  - **Hybrid Query**: Combine both text and image inputs, with a user-defined weighting (λ), to return the top 5 results.
 
-**Requirements:**
- - The user can input a text query. After hitting the search button, the user should see the top 5 most relevant images from the database along with their similarity scores.
- - The user can upload an image query. Again, return the top 5 relevant images along with similarity scores.
- - The user can upload both an image and text query. In this case, the user can enter a value between 0.0 and 1.0 indicating how much to weigh the text query relative to the image query. Again, return the top 5 relevant images along with similarity scores.
- - The user can choose to use embeddings corresponding to the first k principle components instead of CLIP embeddings for image queries. You can reuse work from this week's lab.
+- **Technologies Used**:
+  - **Model**: CLIP (ViT-B-32) for computing image and text embeddings.
+  - **Framework**: Flask for the web application.
+  - **Frontend**: HTML and CSS for the user interface.
+  - **Data**: Precomputed image embeddings and the COCO dataset.
 
-[This video](https://youtu.be/U2Ga0ydCfNA) should clarify the requirements. (This video doesn't include the last requirement, but you should include it.)
+---
 
-**Please complete the Python notebook as a first step. You don't need to hand this in, but it walks you through implementation steps.**
+## Part 0: Setup Environment
 
-**Please download these files:**
-- [`coco_images_resized.zip`](https://drive.google.com/file/d/1eNQIUlIKqOg-3e205YIMyUnfTTaOIspP/view?usp=sharing): The image files.
-- [`image_embeddings.pickle`](https://drive.google.com/file/d/1M0LodmtqPW-WfEUT50iAx9kAqBUo4CWm/view?usp=sharing): The image embeddings.
-- [`house.jpg`](https://drive.google.com/file/d/1uXzWnWgGIqwgEGWbWYY2xUtYXVVRvhBd/view?usp=sharing): An example image.
+You can use the `Makefile` to install all dependencies. In your terminal, simply run:
 
+```bash
+make install
+```
+
+This will automatically install the necessary packages listed in `requirements.txt`, including:
+
+- flask
+- torch
+- torchvision
+- open-clip-torch
+- pandas
+- numpy
+
+---
+
+## Part 1: Running the Application
+
+Once the environment is set up, you can start the Flask application by running:
+
+```bash
+make run
+```
