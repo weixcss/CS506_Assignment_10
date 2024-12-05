@@ -41,22 +41,6 @@ In this assignment, we implemented a simplified version of Google Image Search u
 3. **Place `house.jpg`**:
 - Place the `house.jpg` file in the main project directory.
 
-Ensure your project folder is structured as follows:
-
-CS506-Assignment10/
-├── static/
-│   ├── coco_images_resized/
-│   │   ├── COCO_train2014_000000107758.jpg
-│   │   └── ...
-│   └── styles.css
-├── templates/
-│   └── index.html
-├── app.py
-├── image_embeddings.pickle
-├── requirements.txt
-├── Makefile
-└── README.md
-
 Once all files are correctly placed, you can proceed with running the application as described in the setup instructions.
 
 ## Part 0: Setup Environment
