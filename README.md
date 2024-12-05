@@ -22,6 +22,43 @@ In this assignment, we implemented a simplified version of Google Image Search u
 
 ---
 
+## Required Files
+
+**Please download these files:**
+
+- [`coco_images_resized.zip`](https://drive.google.com/file/d/1eNQIUlIKqOg-3e205YIMyUnfTTaOIspP/view?usp=sharing): The image files.
+- [`image_embeddings.pickle`](https://drive.google.com/file/d/1M0LodmtqPW-WfEUT50iAx9kAqBUo4CWm/view?usp=sharing): The image embeddings.
+- [`house.jpg`](https://drive.google.com/file/d/1uXzWnWgGIqwgEGWbWYY2xUtYXVVRvhBd/view?usp=sharing): An example image.
+
+### File Setup Instructions
+
+1. **Unzip the `coco_images_resized.zip` file**:
+   - Place the unzipped `coco_images_resized` folder inside the `static` directory.
+
+2. **Move `image_embeddings.pickle`**:
+- Place the `image_embeddings.pickle` file in the main project directory.
+
+3. **Place `house.jpg`**:
+- Place the `house.jpg` file in the main project directory.
+
+Ensure your project folder is structured as follows:
+
+CS506-Assignment10/
+├── static/
+│   ├── coco_images_resized/
+│   │   ├── COCO_train2014_000000107758.jpg
+│   │   └── ...
+│   └── styles.css
+├── templates/
+│   └── index.html
+├── app.py
+├── image_embeddings.pickle
+├── requirements.txt
+├── Makefile
+└── README.md
+
+Once all files are correctly placed, you can proceed with running the application as described in the setup instructions.
+
 ## Part 0: Setup Environment
 
 You can use the `Makefile` to install all dependencies. In your terminal, simply run:
